@@ -1,0 +1,7 @@
+package ClassIMetody.LogicheskieMwtody;
+
+public class Main {
+    public static void main(String[] args) {
+        new A(100);
+    }
+}

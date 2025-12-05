@@ -1,0 +1,11 @@
+Программа аварийно завершится с ошибкой java.lang.ExceptionInInitializerError, прежде чем успеет вывести "Hello"
+Это произойдет потому, что статический блок инициализации, который выполняется при загрузке класса до метода main,
+пытается преобразовать нечисловую строку "Y-" в целое число с помощью Integer.parseInt()
+
+PS C:\Users\rajus\OneDrive\Desktop\JavaPolytech>  & 'C:\Program Files\Java\jdk-25\bin\java.exe' '--enable-preview' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\rajus\AppData\Roaming\Code\User\workspaceStorage\72a73252a39d6986e9be6d045e1f9adb\redhat.java\jdt_ws\JavaPolytech_f387764d\bin' 'IskluchIOshibki.test' 
+Exception in thread "main" java.lang.ExceptionInInitializerError
+Caused by: java.lang.NumberFormatException: For input string: "Y-"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+        at java.base/java.lang.Integer.parseInt(Integer.java:565)
+        at java.base/java.lang.Integer.parseInt(Integer.java:662)
+        at IskluchIOshibki.test.<clinit>(test.java:6)
